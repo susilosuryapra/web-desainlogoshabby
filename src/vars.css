@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Angelic Bright';
+    src: url('../assets/fonts/Angelic\ Bright.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Castoro-Regular';
+    src: url('../assets/fonts/Castoro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Castoro-Italic';
+    src: url('../assets/fonts/Castoro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* Colors */
+    --color-text: #0B1215;
+    --color-primary: #576cbc;
+    --color-secondary: #dab2ff;
+    --color-dark: #0b2447;
+    --color-bg: #F1FAFF;
+
+    /* Fonts */
+    --font-roboto: "Roboto", sans-serif;
+    --font-angelic-bright: "Angelic Bright", sans-serif;
+    --font-castoro-regular: "Castoro-Regular", serif;
+    --font-castoro-italic: "Castoro-Italic", serif;
+}

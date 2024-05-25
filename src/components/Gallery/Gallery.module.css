@@ -1,0 +1,161 @@
+@import '../../vars.css';
+
+body, html {
+    height: 100%; /* Pastikan body dan html mengambil tinggi penuh */
+    margin: 0; /* Menghilangkan margin default */
+    padding: 0; /* Menghilangkan padding default */
+}
+
+.creationContainer {
+    margin-top: 50px; /* Sesuaikan nilai margin sesuai kebutuhan Anda */
+}
+
+.container {
+    position: relative;
+    background-color: rgba(255, 252, 252, 0.7);
+    border-radius: 15px;
+    padding: 25px;
+    z-index: 1;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutImage {
+    width: 30%;
+    padding-bottom: 80px;
+}
+
+.aboutItems {
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.aboutItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    list-style: none;
+    padding: 20px;
+}
+
+.aboutItem h3 {
+    font-family: var(--font-angelic-bright);
+    font-size: 45px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 30px;
+    padding-bottom: 0px;
+
+}
+
+.aboutItem p {
+    font-family: var(--font-castoro-regular);
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.gallery {
+    width: 100%; /* Memastikan gallery mengambil lebar penuh */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.galleryImage {
+    max-width: 300px; /* Atur lebar maksimum gambar */
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto; /* Center the images within their container */
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        background-color: rgba(255, 252, 252, 0.7);
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Menjadikan container setinggi kontennya */
+    }
+
+    .content {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto; /* Menjadikan konten setinggi kontainer */
+    }
+
+    .aboutImage {
+        padding-top: 0px;
+        padding-bottom: 20px;
+        width: 30%;
+    }
+
+    .aboutItems {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Menjadikan aboutItems setinggi konten */
+        margin: 0; /* Menghilangkan margin default */
+        padding-right: 40px;
+    }
+
+    .aboutItem {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Memastikan aboutItem mengambil lebar penuh */
+        margin: 0; /* Menghilangkan margin default */
+    }
+
+    .aboutItem h3 {
+        font-family: var(--font-angelic-bright);
+        font-size: 25px;
+        font-weight: 600;
+        margin: 0; /* Menghilangkan margin default */
+        padding-bottom: 8px;
+    }
+
+    .aboutItem p {
+        font-family: var(--font-castoro-regular);
+        font-size: 10px;
+        margin: 0; /* Menghilangkan margin default */
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .gallery {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .galleryImage {
+        width: 60%; /* Memastikan gambar mengambil lebar yang lebih kecil pada layar kecil */
+        max-width: 200px; /* Menghapus batas maksimum pada layar kecil */
+    }
+}

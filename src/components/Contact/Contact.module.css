@@ -1,0 +1,80 @@
+@import '../../vars.css';
+
+.container{
+    color: var(--color-text);
+    margin-top: 120px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.text h2{
+    font-family: var(--font-angelic-bright);
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 26px;
+    margin-bottom: 50px;
+    padding-right: 45px;
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.link a{
+    font-family: var(--font-castoro-italic);
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 400;
+    list-style-position: 1.5px;
+}
+
+@media screen and (max-width: 830px) {
+    .container{
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text h2 {
+        font-size: 30px; /* Ukuran teks lebih kecil */
+        margin-bottom: 0px;
+    }
+
+    .links{
+        align-items: center;
+        gap: 0px;
+        margin-bottom: 20px;
+    }
+
+    .link{
+        gap: 8px;
+    }
+
+    .link a {
+        font-size: 20px; /* Ukuran link lebih kecil */
+    }
+
+    .link img {
+        width: 20px; /* Ukuran link lebih kecil */
+    }
+}

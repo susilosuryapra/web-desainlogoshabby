@@ -1,0 +1,224 @@
+@import '../../vars.css';
+
+:root {
+    --animation-distance: 100vh; /* Mengatur jarak gerakan lingkaran */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Ubah ini dari hidden ke auto */
+    background: #F1FAFF; /* Background berwarna putih */
+    display: flex;
+    flex-direction: column; /* Tambahkan ini untuk layout kolom */
+    align-items: center;
+    justify-content: flex-start; /* Ubah dari center ke flex-start */
+}
+
+
+.container {
+    display: flex;
+    align-items: center;  /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove all padding */
+    box-sizing: border-box; /* Ensure padding and borders are included in the element's total width and height */
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+    text-align: center; /* Center text alignment */
+    color: var(--color-text);
+    z-index: 1;
+}
+
+.title {
+    font-size: 72px;
+    font-weight: 900;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    font-family: var(--font-angelic-bright);
+    color: var(--color-text);
+}
+
+.description {
+    font-size: 20px; /* Reduce font size */
+    font-family: var(--font-castoro-italic);
+}
+
+.contactBtn {
+    margin-top: 30px;
+    text-decoration: none;
+    background-color: #B0F6B3;
+    color: var(--color-text);
+    border-radius: 50px; /* Adjust as needed */
+    font-family: var(--font-castoro-regular);
+    font-size: 20px; /* Reduce font size */
+    font-weight: 600;
+    padding: 10px 20px; /* Reduce padding */
+    /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25); */
+    border: 2px solid #0B1215;
+}
+
+.contactBtn:hover {
+    background-color: #f9ee8c; /* Make background transparent on hover */
+    font-family: var(--font-castoro-italic);
+}
+
+.background {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.circle {
+    width: 35vw; /* Perbesar ukuran lingkaran */
+    height: 35vw; /* Perbesar ukuran lingkaran */
+    border-radius: 50%;
+    filter: blur(150px);
+}
+
+/* Mengatur warna masing-masing lingkaran */
+.circle1 {
+    background: #95C0FF;
+}
+
+.circle2 {
+    background: #FBC6A4;
+}
+
+.circle3 {
+    background: #CE97B0;
+}
+
+.circle4 {
+    background: #F4A9A8;
+}
+
+.circle5 {
+    background: #AF9CB8;
+}
+
+.circle6 {
+    background: #87C6F1;
+}
+
+.top .circle {
+    animation: float-down 8s infinite ease-in-out;
+}
+
+.bottom .circle {
+    animation: float-up 8s infinite ease-in-out;
+}
+
+@keyframes float-up {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100vh); /* Bergerak dari bawah ke atas */
+    }
+}
+
+@keyframes float-down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(100vh); /* Bergerak dari atas ke bawah */
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .content {
+        align-items: center;
+    }
+
+    .title {
+        font-size: 40px;
+        font-weight: 900;
+        margin-bottom: 20px; /* Adjust margin as needed */
+        font-family: var(--font-angelic-bright);
+        color: var(--color-text);
+    }
+    
+    .description {
+        font-size: 15px; /* Reduce font size */
+        font-family: var(--font-castoro-italic);
+    }
+    
+    .contactBtn {
+        margin-top: 30px;
+        text-decoration: none;
+        background-color: #B0F6B3;
+        color: var(--color-text);
+        border-radius: 50px; /* Adjust as needed */
+        font-family: var(--font-castoro-regular);
+        font-size: 15px; /* Reduce font size */
+        font-weight: 600;
+        padding: 5px 10px; /* Reduce padding */
+        /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25); */
+        border: 1px solid #0B1215;
+    }
+
+    .contactBtn:hover {
+        background-color: #f9ee8c; /* Make background transparent on hover */
+        font-family: var(--font-castoro-italic);
+    }
+
+    .circle {
+        width: 35vw; /* Perbesar ukuran lingkaran */
+        height: 100vw; /* Perbesar ukuran lingkaran */
+        border-radius: 50%;
+        filter: blur(70px);
+    }
+
+    .top .circle {
+        animation: float-down 8s infinite ease-in-out;
+    }
+    
+    .bottom .circle {
+        animation: float-up 8s infinite ease-in-out;
+    }
+
+    @keyframes float-up {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-50vh); /* Bergerak dari bawah ke atas */
+        }
+    }
+    
+    @keyframes float-down {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(50vh); /* Bergerak dari atas ke bawah */
+        }
+    }
+}
